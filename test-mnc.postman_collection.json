@@ -1,0 +1,561 @@
+{
+	"info": {
+		"_postman_id": "33cf0671-d19a-43eb-bd01-7a2bd19dda72",
+		"name": "test-mnc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14185792"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"first_name03\",\r\n    \"last_name\":\"last_name03\",\r\n    \"email\":\"email03@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"first_name02\",\r\n    \"last_name\":\"last_name02\",\r\n    \"email\":\"email02@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 17:02:30 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "87"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 302,\n    \"status\": \"FOUND\",\n    \"data\": \"user with email email02@gmail.com has registered\"\n}"
+				},
+				{
+					"name": "register success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"first_name03\",\r\n    \"last_name\":\"last_name03\",\r\n    \"email\":\"email03@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 17:02:57 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "163"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 201,\n    \"status\": \"CREATED\",\n    \"data\": {\n        \"id\": \"8503fbdd-1664-43ff-84ad-309f4a343774\",\n        \"user_name\": \"first_name03 last_name03\",\n        \"email\": \"email03@gmail.com\",\n        \"balance\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"email@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 16:58:46 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "206"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 202,\n    \"status\": \"ACCEPTED\",\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgxNDc5MjYsImlkIjoiZTdmNDVlYmMtZjVjZC00MTQwLTg4ODEtMTkyODA5M2IzNzhjIn0.QZlfclEalCU0ZOi2ZKfN-rIr59KNO4Ey5zlq5W3iYQc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "entry amount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgxNDc5MjYsImlkIjoiZTdmNDVlYmMtZjVjZC00MTQwLTg4ODEtMTkyODA5M2IzNzhjIn0.QZlfclEalCU0ZOi2ZKfN-rIr59KNO4Ey5zlq5W3iYQc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/manage-bank/entry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"manage-bank",
+						"entry"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "entry amount uauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgxNDcxNTEsImlkIjoiZTdmNDVlYmMtZjVjZC00MTQwLTg4ODEtMTkyODA5M2IzNzhjIn0.CD5-YXYr50nVf9_lJj9I-cRBwP-Jh-jpj2ec8vDX9n8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/manage-bank/entry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"manage-bank",
+								"entry"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 16:58:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 401,\n    \"status\": \"UNAUTHORIZED\",\n    \"data\": \"user unauthorize\"\n}"
+				},
+				{
+					"name": "entry amount success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgxNDc5MjYsImlkIjoiZTdmNDVlYmMtZjVjZC00MTQwLTg4ODEtMTkyODA5M2IzNzhjIn0.QZlfclEalCU0ZOi2ZKfN-rIr59KNO4Ey5zlq5W3iYQc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\":1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/manage-bank/entry",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"manage-bank",
+								"entry"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 17:00:01 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "121"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 201,\n    \"status\": \"CREATED\",\n    \"data\": {\n        \"account_id\": \"4d02e0be-2f3f-4f60-abca-537be10ed0b8\",\n        \"amount\": 1000,\n        \"balance\": 9000\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgxNDgyMTMsImlkIjoiZTdmNDVlYmMtZjVjZC00MTQwLTg4ODEtMTkyODA5M2IzNzhjIn0.UWX6ib0_F4azytBH3bKgJYR37EBnkcGZ1JeH67F204w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to_account_id\":\"97496a9e-4a3c-4d57-8bf9-fe47832ab304\",\r\n    \"amount\":1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/manage-bank/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"manage-bank",
+						"transfer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "transfer unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgxNDc5MjYsImlkIjoiZTdmNDVlYmMtZjVjZC00MTQwLTg4ODEtMTkyODA5M2IzNzhjIn0.QZlfclEalCU0ZOi2ZKfN-rIr59KNO4Ey5zlq5W3iYQc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"to_account_id\":\"97496a9e-4a3c-4d57-8bf9-fe47832ab304\",\r\n    \"amount\":1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/manage-bank/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"manage-bank",
+								"transfer"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 17:02:04 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 401,\n    \"status\": \"UNAUTHORIZED\",\n    \"data\": \"user unauthorize\"\n}"
+				},
+				{
+					"name": "transfer success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgxNDgyMTMsImlkIjoiZTdmNDVlYmMtZjVjZC00MTQwLTg4ODEtMTkyODA5M2IzNzhjIn0.UWX6ib0_F4azytBH3bKgJYR37EBnkcGZ1JeH67F204w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"to_account_id\":\"97496a9e-4a3c-4d57-8bf9-fe47832ab304\",\r\n    \"amount\":1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/manage-bank/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"manage-bank",
+								"transfer"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 17:04:01 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "210"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 201,\n    \"status\": \"CREATED\",\n    \"data\": {\n        \"id\": \"1d400ca9-9ba2-43e1-99a2-eea2278347bd\",\n        \"from_account_id\": \"4d02e0be-2f3f-4f60-abca-537be10ed0b8\",\n        \"to_account_id\": \"97496a9e-4a3c-4d57-8bf9-fe47832ab304\",\n        \"amount\": 1000\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgxNDc5MjYsImlkIjoiZTdmNDVlYmMtZjVjZC00MTQwLTg4ODEtMTkyODA5M2IzNzhjIn0.QZlfclEalCU0ZOi2ZKfN-rIr59KNO4Ey5zlq5W3iYQc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/manage-bank/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"manage-bank",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "logout success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODgxNDc5MjYsImlkIjoiZTdmNDVlYmMtZjVjZC00MTQwLTg4ODEtMTkyODA5M2IzNzhjIn0.QZlfclEalCU0ZOi2ZKfN-rIr59KNO4Ey5zlq5W3iYQc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/manage-bank/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"manage-bank",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Jun 2023 17:01:05 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"OK\",\n    \"data\": null\n}"
+				}
+			]
+		}
+	]
+}
